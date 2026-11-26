@@ -903,9 +903,10 @@ SESSION_SEARCH_SCHEMA = {
             "session_id": {
                 "type": "string",
                 "description": (
-                    "Scroll shape. Session to read inside. Use the session_id returned "
-                    "from a prior discovery call. Must be paired with "
-                    "around_message_id."
+                    "Read and scroll shapes. Session to open: alone it reads the "
+                    "whole session; with around_message_id it scrolls a window "
+                    "around that message. Use a session_id from discovery or "
+                    "browse, or the id segment of an `@session:<profile>/<id>` link."
                 ),
             },
             "around_message_id": {
